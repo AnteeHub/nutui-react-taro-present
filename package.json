@@ -1,8 +1,8 @@
 {
-  "name": "myApp",
+  "name": "nutui",
   "version": "1.0.0",
   "private": true,
-  "description": "a demo project for present nutui-react-taro",
+  "description": "nutui-react-taro showcase",
   "templateInfo": {
     "name": "react-NutUI",
     "typescript": true,

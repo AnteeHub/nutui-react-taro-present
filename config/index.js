@@ -1,6 +1,6 @@
 const config = {
-  projectName: 'myApp',
-  date: '2022-12-29',
+  projectName: 'nutui',
+  date: '2023-2-15',
   designWidth: 375,
   deviceRatio: {
     640: 2.34 / 2,

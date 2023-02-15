@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "myApp",
-  "description": "a demo project for present nutui-react-taro",
+  "projectname": "nutui",
+  "description": "nutui-react-taro showcase",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
