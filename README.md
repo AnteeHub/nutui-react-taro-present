@@ -2,4 +2,4 @@
 
 a bug present of nutui-react-taro
 
-type: `<TextArea />`
+type: `<Dialog />`
