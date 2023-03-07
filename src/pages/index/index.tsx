@@ -1,13 +1,14 @@
 import { Component, PropsWithChildren } from "react";
-import { Button, Dialog } from "@nutui/nutui-react-taro";
+import { Input } from "@nutui/nutui-react-taro";
 import "./index.scss";
 
-class Index extends Component<PropsWithChildren> {
+class Index extends Component<PropsWithChildren<any>> {
   constructor(props: any) {
     super(props);
 
     this.state = {
-      visible: false,
+      bankcount: "",
+      tel: "",
     };
   }
 
@@ -23,39 +24,26 @@ class Index extends Component<PropsWithChildren> {
     return (
       <div className="nutui-react-demo">
         <div className="index">欢迎使用 NutUI React 开发 Taro 多端项目。</div>
-        <div className="index">
-          <Dialog
-            title="使用组件弹窗"
-            content="这里是不起作用的"
-            visible={this.state.visible}
-            onOk={() => {
-              this.setState({ visible: false });
-            }}
-            onCancel={() => {
-              this.setState({ visible: false });
-            }}
-          >
-            组件调用对话框，用 `content` 属性是不起作用的
-          </Dialog>
-          <Button
-            onClick={() => {
-              Dialog.alert({
-                title: "使用 Dialog.alert 弹窗",
-                content: "内容",
-              });
-            }}
-          >
-            使用 Dialog.alert 弹窗
-          </Button>
-          <Button
-            onClick={() => {
-              this.setState({
-                visible: !this.state.visible,
-              });
-            }}
-          >
-            使用组件弹窗
-          </Button>
+        <div className="index" style={{ width: "100vw" }}>
+          <Input
+            name="number"
+            label="银行卡"
+            placeholder="银行卡"
+            defaultValue={this.state.bankcount}
+            inputAlign="right"
+            type="digit"
+            maxlength={18}
+          />{" "}
+          <Input
+            name="tel"
+            labelWidth="120"
+            label="银行卡预留手机号"
+            placeholder=""
+            defaultValue={this.state.tel}
+            inputAlign="right"
+            type="tel"
+            border={false}
+          />
         </div>
       </div>
     );
